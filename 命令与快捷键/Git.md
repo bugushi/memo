@@ -2,21 +2,19 @@
 
 > Git飞行规则：[https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md)
 
-
-### 设置
-`git config --global user.name :name` <br />
-`git config --global user.email :email` <br />
-`git config --global core.ignorecase false`  强制识别文件夹大小写
-
-### 查看
-`cat ~/.gitconfig` 查看全局git配置文件<br />
-`git status`<br />
-`git log` 查看commit历史<br />
-`git log :file_name` 查看文件commit历史 <br />
-`git show` 查看最近commit明细<br />
-`git show :commit_hash` 查看某次commit明细<br />
-`git show :file_name` 查看文件最近commit明细<br />
-`git diff` 查看工作区更改明细
+分类 | 命令 | 说明
+-- | -- | --
+设置 | `git config --global user.name :name` | 设置用户名
+| | `git config --global user.email :email` | 设置email
+| | `git config --global core.ignorecase false` | 强制识别文件夹大小写
+查看 | `cat ~/.gitconfig` | 查看全局git配置文件
+|| `git status` | 
+||`git log` | 查看commit历史
+||`git log :file_name` | 查看文件commit历史
+||`git show` | 查看最近commit明细
+||`git show :commit_hash` | 查看某次commit明细
+||`git show :file_name` |  查看文件最近commit明细
+||`git diff` | 查看工作区更改明细
 
 ### 暂存
 `git stash` <br />
