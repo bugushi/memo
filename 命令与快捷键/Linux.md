@@ -3,7 +3,8 @@
 ### 文件
 key | action
 -- | --
-`unzip test.zip -d tmp/` | 解压文件
+`zip -r dist.zip source` | 将source目录压缩为dist.zip
+`unzip test.zip -d tmp/` | 解压文件, -d指定目录
 
 ### 网络
 key | action
