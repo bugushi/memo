@@ -34,7 +34,8 @@ key | action
 -- | --
 `git checkout -- :file` | 放弃工作区更改
 `git checkout -- .` | 放弃工作区全部更改
-`git reset --soft HEAD` | 取消commit，比如需要重填commit信息
+`git commit --amend` | 修改最近一次commit信息
+`git reset --soft HEAD` | 取消commit，比如需要重填commit信息
 `git reset HEAD` | 取消commit和add，重新提交代码
 `git reset --hard HEAD` | 取消commit、add和工作区修改，恢复和远程一致
 `git reset --hard :commit_hash` | 恢复到某一提交版本
