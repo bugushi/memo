@@ -12,3 +12,4 @@ key | action
 `lsof -i :3000` | 查看3000端口占用
 `kill -9 <PID>` | 杀端口
 `export http_proxy=http://127.0.0.1:1080` | 设置终端代理
+`vim ~/.bash_profile` | 设置终端代理
