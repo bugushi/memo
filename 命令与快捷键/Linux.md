@@ -13,3 +13,8 @@ key | action
 `kill -9 <PID>` | 杀端口
 `export http_proxy=http://127.0.0.1:1080` | 设置终端代理
 `vim ~/.bash_profile` | 设置终端代理
+
+###
+key | action | 备注
+-- | -- | --
+`ssh-keygen` | 生成sshkey | 先进入~/.ssh目录
