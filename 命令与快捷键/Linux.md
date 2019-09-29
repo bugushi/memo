@@ -18,3 +18,8 @@ key | action
 key | action | 备注
 -- | -- | --
 `ssh-keygen` | 生成sshkey | 先进入~/.ssh目录
+
+### 终端
+key | action | 备注
+-- | -- | --
+在`~/.zshrc`中增加`source ~/.bash_profile` | 读取bash shell的默认配置 | 
