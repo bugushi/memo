@@ -14,7 +14,7 @@ key | action
 `export http_proxy=http://127.0.0.1:1080` | 设置终端代理
 `vim ~/.bash_profile` | 设置终端代理
 
-### 安全
+### SSH
 key | action | 备注
 -- | -- | --
 `ssh-keygen` | 生成sshkey | 先进入~/.ssh目录
@@ -23,3 +23,8 @@ key | action | 备注
 key | action | 备注
 -- | -- | --
 在`~/.zshrc`中增加`source ~/.bash_profile` | 读取bash shell的默认配置 | 
+
+### Vim
+key | action | 备注
+-- | -- | --
+`ctrl`+`f` | 向下翻页 | 
