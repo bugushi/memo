@@ -19,6 +19,25 @@ key | action | 备注
 -- | -- | --
 `ssh-keygen` | 生成sshkey | 先进入~/.ssh目录
 
+### 环境变量
+```
+# 系统级别
+/etc/bashrc # 推荐
+
+# 用户级别
+~/.bash_profile  # macOS默认
+~/.bashrc # linux默认
+```
+```
+# 示例 .bash_profile
+export JAVA_HOME = /home/myuser/jdk1.7.0_03
+export PATH = $JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+# 执行
+source .bash_profile
+```
+
 ### 终端
 key | action | 备注
 -- | -- | --
