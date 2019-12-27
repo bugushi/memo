@@ -25,8 +25,8 @@ key | action | 备注
 /etc/bashrc
 
 # 用户级别
-~/.bash_profile  # macOS默认
-~/.bashrc # linux默认
+~/.bash_profile  # macOS
+~/.bashrc # linux
 ```
 ```
 # 示例 .bash_profile
