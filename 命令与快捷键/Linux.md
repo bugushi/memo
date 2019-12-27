@@ -23,8 +23,3 @@ key | action | 备注
 key | action | 备注
 -- | -- | --
 在`~/.zshrc`中增加`source ~/.bash_profile` | 读取bash shell的默认配置 | 
-
-### Vim
-key | action | 备注
--- | -- | --
-`ctrl`+`f` | 向下翻页 | 
