@@ -22,7 +22,7 @@ key | action | 备注
 ### 环境变量
 ```
 # 系统级别
-/etc/bashrc # 推荐
+/etc/bashrc
 
 # 用户级别
 ~/.bash_profile  # macOS默认
