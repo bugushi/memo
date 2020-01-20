@@ -5,6 +5,8 @@ key | action
 -- | --
 `zip -r dist.zip source` | 将source目录压缩为dist.zip
 `unzip test.zip -d tmp/` | 解压文件, -d指定目录
+`tail -f test.log` | 打开文件末尾，并且动态更新
+`open . -a Visual\ Studio\ Code` | 使用vscode打开当前目录
 
 ### 网络
 key | action
