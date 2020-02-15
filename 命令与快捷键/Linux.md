@@ -7,6 +7,7 @@ key | action
 `unzip test.zip -d tmp/` | 解压文件, -d指定目录
 `tail -f test.log` | 打开文件末尾，并且动态更新
 `open . -a Visual\ Studio\ Code` | 使用vscode打开当前目录
+`scp /Users/bugu/Desktop/guyu.png  root@47.102.209.64:/var/www/download/` | 上传文件到服务器
 
 ### 网络
 key | action
