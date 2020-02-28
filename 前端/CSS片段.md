@@ -1,6 +1,6 @@
-# 多行省略
+# CSS代码片段
 
-### 1、单行
+### 单行省略
 ```css
 overflow: hidden;
 text-overflow: ellipsis;
@@ -8,7 +8,7 @@ white-space: nowrap;
 ```
 
 
-### 2、多行
+### 多行省略
 仅支持webkit内核
 ```css
 overflow : hidden;
