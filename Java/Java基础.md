@@ -21,3 +21,14 @@ HashMap将键entry(键值对)取hash，存在默认16个桶中，分配在同一
 通过字符串获得类或者接口
 
 ### 线程安全
+
+
+### 为什么匿名函数调用的类成员需要指定为final类型
+因为final类型的类成员，会拷贝一份到匿名函数中。这样当类成员随着类销毁，匿名函数还可以保持正常运行
+
+### 类加载器
+- 引导类加载器（bootstrap class loader）：它用来加载 Java 的核心库，是用原生代码来实现的，并不继承自 java.lang.ClassLoader。
+- 扩展类加载器（extensions class loader）：它用来加载 Java 的扩展库。Java 虚拟机的实现会提供一个扩展库目录。该类加载器在此目录里面查找并加载 Java 类。
+- 系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。
+
+![类加载器](https://www.ibm.com/developerworks/cn/java/j-lo-classloader/image001.jpg)
