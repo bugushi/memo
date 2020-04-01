@@ -4,7 +4,6 @@
 ```
 List list = new ArrayList(); // raw type
 List<Integer> listIntgrs = new ArrayList<>(); // parameterized type
-
 ```
 
 ### `Array` 和 `ArrayList`
