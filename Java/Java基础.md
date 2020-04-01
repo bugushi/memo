@@ -1,7 +1,7 @@
 # Java基础
 
 ### 什么是RawTypes
-```
+```java
 List list = new ArrayList(); // raw type
 List<Integer> listIntgrs = new ArrayList<>(); // parameterized type
 ```
