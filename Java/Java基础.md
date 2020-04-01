@@ -1,5 +1,11 @@
 # Java基础
 
+### 什么是RawTypes
+```
+List list = new ArrayList(); // raw type
+List<Integer> listIntgrs = new ArrayList<>(); // parameterized type
+
+```
 
 ### `Array` 和 `ArrayList`
 Array定长、定类型；ArrayList变长、泛型
