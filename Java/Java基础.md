@@ -20,6 +20,13 @@ HashMap将键entry(键值对)取hash，存在默认16个桶中，分配在同一
 ### 反射
 通过字符串获得类或者接口
 
+### 有了接口为什么还需要抽象类
+- 类可以实现无限个接口，但只能从一个抽象类继承
+- 接口方法只有public声明，但抽象类可以有非抽象方法
+- 接口只有static final成员变量，而抽象类可以有各种成员
+- 抽象类是对对象的抽象，而接口是一种行为规范
+
+
 ### 线程安全
 
 
@@ -32,3 +39,4 @@ HashMap将键entry(键值对)取hash，存在默认16个桶中，分配在同一
 - 系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。
 
 ![类加载器](https://www.ibm.com/developerworks/cn/java/j-lo-classloader/image001.jpg)
+
