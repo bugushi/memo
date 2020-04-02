@@ -1,5 +1,10 @@
 # Java基础
 
+### 什么是RawTypes
+```java
+List list = new ArrayList(); // raw type
+List<Integer> listIntgrs = new ArrayList<>(); // parameterized type
+```
 
 ### `Array` 和 `ArrayList`
 Array定长、定类型；ArrayList变长、泛型
@@ -39,4 +44,3 @@ HashMap将键entry(键值对)取hash，存在默认16个桶中，分配在同一
 - 系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。
 
 ![类加载器](https://www.ibm.com/developerworks/cn/java/j-lo-classloader/image001.jpg)
-
