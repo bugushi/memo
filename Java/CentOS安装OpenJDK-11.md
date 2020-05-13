@@ -1,4 +1,5 @@
-### 1、查找可安装项 `yum list java*`
+### 1、查找可安装项 
+`yum list java*`
 
 ### 2、区分jre和jdk
 jre | jdk
@@ -18,4 +19,5 @@ export PATH=$PATH:$JAVA_HOME/bin
 ```
 source /etc/profile
 ```
-### 4、查看版本 `java -version`
+### 4、查看版本 
+`java -version`
