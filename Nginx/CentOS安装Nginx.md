@@ -4,6 +4,12 @@
 安装
 `sudo yum install nginx`
 
+设置开机启动 Nginx
+`sudo systemctl enable nginx`
+
+关闭开机启动 Nginx
+`sudo systemctl disable nginx`
+
 启动 Nginx
 `sudo systemctl start nginx`
 
@@ -16,8 +22,4 @@
 修改 Nginx 配置后，重新加载
 `sudo systemctl reload nginx`
 
-设置开机启动 Nginx
-`sudo systemctl enable nginx`
 
-关闭开机启动 Nginx
-`sudo systemctl disable nginx`
