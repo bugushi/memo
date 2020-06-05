@@ -51,11 +51,11 @@ $JENKINS_USER="root"
 java -jar jenkins.war --http2Port=8080 &
 ```
 
-#### 2、浏览到 `http://localhost:8080`，并等待 解锁 Jenkins 页面出现
+#### 3、浏览到 `http://localhost:8080`，并等待 解锁 Jenkins 页面出现
 ![jenkins](https://www.jenkins.io/zh/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg)
 
-#### 3、从 Jenkins 控制台日志输出中，复制自动生成的字母数字密码（在两组星号之间）。
+#### 4、从 Jenkins 控制台日志输出中，复制自动生成的字母数字密码（在两组星号之间）。
 ![密码](https://www.jenkins.io/zh/doc/book/resources/tutorials/setup-jenkins-02-copying-initial-admin-password.png)
 
-#### 4、安装推荐插件，创建管理员用户
+#### 5、安装推荐插件，创建管理员用户
 
