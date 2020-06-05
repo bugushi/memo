@@ -38,7 +38,7 @@ rpm -ql jenkins
 > - `/var/log/jenkins/jenkins.log`：jenkins日志文件。
 
 # 初始化 Jenkins 服务器
-#### 1、 编辑 jenkins 配置文件
+#### 1、 编辑 Jenkins 配置文件
 > 为了不因为权限出现各种问题，这里直接修改用户为root。
 
 `vim /etc/sysconfig/jenkins`
@@ -46,10 +46,15 @@ rpm -ql jenkins
 $JENKINS_USER="root"
 ```
 
+#### 2、后台启动Jenkins
+```
+java -jar jenkins.war --http2Port=8080 &
+```
+
 #### 2、浏览到 `http://localhost:8080`，并等待 解锁 Jenkins 页面出现
 ![jenkins](https://www.jenkins.io/zh/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg)
 
-#### 3、从Jenkins控制台日志输出中，复制自动生成的字母数字密码（在两组星号之间）。
+#### 3、从 Jenkins 控制台日志输出中，复制自动生成的字母数字密码（在两组星号之间）。
 ![密码](https://www.jenkins.io/zh/doc/book/resources/tutorials/setup-jenkins-02-copying-initial-admin-password.png)
 
 #### 4、安装推荐插件，创建管理员用户
