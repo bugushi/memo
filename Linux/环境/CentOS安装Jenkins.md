@@ -4,13 +4,13 @@ CentOS | 7.6 64位
 open-JDK | 11
 
 
-### 前置
+# 前置
 安装前检查系统是否已安装open-jdk
 ```
 rpm -qa |grep jdk
 ```
 
-### 安装
+# 安装
 1、下载依赖
 ```
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -37,7 +37,7 @@ rpm -ql jenkins
 > - `/var/lib/jenkins/`：默认的JENKINS_HOME。
 > - `/var/log/jenkins/jenkins.log`：jenkins日志文件。
 
-### 初始化 Jenkins 服务器
+# 初始化 Jenkins 服务器
 1、 编辑 jenkins 配置文件
 > 为了不因为权限出现各种问题，这里直接修改用户为root。
 
