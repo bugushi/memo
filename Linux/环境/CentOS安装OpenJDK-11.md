@@ -4,7 +4,7 @@ CentOS | 7.6 64位
 open-JDK | 11
 
 # 安装
-1、查找可安装项 
+#### 1、查找可安装项 
 `yum list java*`
 
 > 区分jre和jdk
@@ -12,12 +12,12 @@ open-JDK | 11
 > -- | --
 > java-11-openjdk-devel.x86_64 | java-11-openjdk.x86_64
 
-2、安装
+#### 2、安装
 ```
 yum install java-11-openjdk-devel.x86_64
 ```
 
-3、添加环境变量（备用）
+#### 3、添加环境变量（备用）
 ```
 vi /etc/profile
 ```
@@ -32,5 +32,5 @@ export PATH=$PATH:$JAVA_HOME/bin
 source /etc/profile
 ```
 
-4、查看版本 
+#### 4、查看版本 
 `java -version`
