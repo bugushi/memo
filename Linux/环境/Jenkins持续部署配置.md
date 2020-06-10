@@ -1,3 +1,12 @@
+# 前置条件
+### 安装Jenkins插件：`publish-over-ssh`
+部署的前提是Jenkins能和服务器建立连接，此插件用于配置SSH信息
+> https://plugins.jenkins.io/publish-over-ssh/
+
+# 步骤
+### 1、配置服务器连接
+
+### 2、配置项目
 
 
 # 资料
