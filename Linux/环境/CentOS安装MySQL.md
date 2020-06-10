@@ -52,12 +52,12 @@ shell> sudo grep 'temporary password' /var/log/mysqld.log
 ```
 ##### 修改默认密码
 ```
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'Hrtps@123';
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'Hello@123';
 ```
 
 ### 6、允许root远程访问
 ```
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'Hrtps@123' WITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'Hello@123' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 ```
 ### 7、设置编码
