@@ -14,7 +14,7 @@
 `Manage Jenkins` -> `Configure System` -> Add `SSH Server`
 
 配置参考:
-```
+```yml
 Name: TEST_192.168.0.11
 Hostname: 192.168.0.11
 Username: root
@@ -26,15 +26,35 @@ Passphrase: password
 ### 2、配置项目
 `New item` -> `Freestyle project`
 
-##### General部分，勾选`This project is parameterized`，设置分支变量，推荐配置：
-```
+##### General部分，勾选`This project is parameterized` 设置分支变量
+发布时选择的分支，将存在这个变量里，推荐配置：
+```yml
 Name: BRANCH
 Parameter Type: Branch or Tag
 Default Value: origin/master
 ```
 
 ##### Source Code Management部分，指定git库地址
+其中 `Branches to build`条目，填写：
+```yml
+Branch Specifier: $BRANCH # 使用之前定义的分支变量
+```
 
+##### Build部分，填写编译命令 
+`Excute shell` > `Command`
+
+java项目：
+```shell
+mvn clean package -U -DskipTests
+```
+
+##### Post-build Actions部分，填写发布配置 
+`Send build artifacts over SSh` > `SSH Publishers` > `SSH Server`
+
+推荐配置 `Transfers` > `Transfer Set`：
+```yml
+
+```
 
 # 资料
 ### deploy.sh 部署jar包
