@@ -3,10 +3,10 @@
 1. Jenkins可以连接git库，获取源码
 2. Jenkins可以连接服务器，将打包好的代码推送到服务器
 
-### 配置git库credential
+### 配置git库credential，用于访问git库
 `Manage Jenkins` -> `Configure Credentials` -> 侧边`Credentials` -> `global` -> 侧边`Add Credentials`
 
-### 安装Jenkins插件：`publish-over-ssh`
+### 安装Jenkins插件：`publish-over-ssh`，用于连接服务器
 > https://plugins.jenkins.io/publish-over-ssh/
 
 # 步骤
