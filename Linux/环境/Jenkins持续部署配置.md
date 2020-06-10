@@ -41,20 +41,17 @@ Branch Specifier: $BRANCH # 使用之前定义的分支变量
 ```
 
 #### Build部分，填写编译命令 
-`Excute shell` > `Command`
-
-java项目：
+导航：`Excute shell` > `Command`
 ```shell
+# java项目
 mvn clean package -U -DskipTests
 ```
 
 #### Post-build Actions部分，填写发布配置 
-`Send build artifacts over SSh` > `SSH Publishers` > `SSH Server`
-
-推荐配置 `Transfers` > `Transfer Set`：
+导航: `Send build artifacts over SSh` > `SSH Publishers` > `SSH Server` > `Transfers` > `Transfer Set`：
 ```yml
-Source files: target/*.jar
-Remove prefix: target
+Source files: server/target/*.jar
+Remove prefix: server/target
 Remote directory: backend
 Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m -Dspring.profiles.active=prod
 ```
