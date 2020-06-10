@@ -1,6 +1,12 @@
 # 前置条件
+部署有两个前提：
+1. Jenkins可以连接git库，获取源码
+2. Jenkins可以连接服务器，将打包好的代码推送到服务器
+
+### 配置git库credential
+`Manage Jenkins` -> `Configure Credentials` -> 侧边`Credentials` -> `global` -> 侧边`Add Credentials`
+
 ### 安装Jenkins插件：`publish-over-ssh`
-部署的前提是Jenkins能和服务器建立连接，此插件用于配置SSH信息
 > https://plugins.jenkins.io/publish-over-ssh/
 
 # 步骤
@@ -13,9 +19,21 @@ Name: TEST_192.168.0.11
 Hostname: 192.168.0.11
 Username: root
 Remote Directory: /var/www/
+Use password authentication: checked
+Passphrase: password
+```
+添加完成后，点击 `Test Configuration`测试连接
+### 2、配置项目
+`New item` -> `Freestyle project`
+
+##### General部分，勾选`This project is parameterized`，设置分支变量，推荐配置：
+```
+Name: BRANCH
+Parameter Type: Branch or Tag
+Default Value: origin/master
 ```
 
-### 2、配置项目
+##### Source Code Management部分，指定git库地址
 
 
 # 资料
