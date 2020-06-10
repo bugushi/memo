@@ -53,7 +53,10 @@ mvn clean package -U -DskipTests
 
 推荐配置 `Transfers` > `Transfer Set`：
 ```yml
-
+Source files: target/*.jar
+Remove prefix: target
+Remote directory: backend
+Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m
 ```
 
 # 资料
