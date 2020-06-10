@@ -56,7 +56,7 @@ mvn clean package -U -DskipTests
 Source files: target/*.jar
 Remove prefix: target
 Remote directory: backend
-Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m
+Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m -Dspring.profiles.active=prod
 ```
 
 # 资料
