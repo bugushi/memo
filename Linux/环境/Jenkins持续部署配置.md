@@ -5,6 +5,15 @@
 
 # 步骤
 ### 1、配置服务器连接
+`Manage Jenkins` -> `Configure System` -> Add `SSH Server`
+
+配置参考:
+```
+Name: TEST_192.168.0.11
+Hostname: 192.168.0.11
+Username: root
+Remote Directory: /var/www/
+```
 
 ### 2、配置项目
 
