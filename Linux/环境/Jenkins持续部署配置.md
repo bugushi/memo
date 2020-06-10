@@ -1,7 +1,7 @@
 
 
 # 资料
-#### deploy.sh 部署
+### deploy.sh 部署jar包
 目录 `/usr/local/bin`
 ```shell
 #!/usr/bin/env bash
@@ -71,7 +71,7 @@ startCommand="nohup java $JAVA_OPT -jar $APP_BASE_PATH/$APP_NAME/$APP_NAME.jar >
 sh /usr/local/bin/autostart.sh ${APP_NAME} "${startCommand}"
 ```
 
-#### autostart.sh 注册系统服务
+### autostart.sh 注册系统服务
 目录 `/usr/local/bin`
 ```shell
 #!/usr/bin/env bash
