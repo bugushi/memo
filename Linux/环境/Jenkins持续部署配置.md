@@ -63,7 +63,7 @@ Remote directory: backend
 Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m -Dspring.profiles.active=prod
 
 # 前端项目
-Source files: build/*
+Source files: build/**
 Remote directory: frontend
 Exec command:
     cd /var/www/frontend
