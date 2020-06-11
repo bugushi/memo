@@ -45,7 +45,13 @@ Branch Specifier: $BRANCH # 使用之前定义的分支变量
 ```shell
 # java项目
 mvn clean package -U -DskipTests
+
+# 前端项目
+#!/bin/bash
+npm install --unsafe-perm=true --allow-root 
+npm run build
 ```
+> `--unsafe-perm=true --allow-root ` 允许使用root用户 https://segmentfault.com/q/1010000019365121
 
 #### Post-build Actions部分，填写发布配置 
 导航: `Send build artifacts over SSh` > `SSH Publishers` > `SSH Server` > `Transfers` > `Transfer Set`：
@@ -53,7 +59,14 @@ mvn clean package -U -DskipTests
 Source files: server/target/*.jar
 Remove prefix: server/target
 Remote directory: backend
-Exec command: deploy.sh eureka-server  -Xms128m -Xmx256m -Dspring.profiles.active=prod
+Exec command: 
+# java项目
+deploy.sh eureka-server  -Xms128m -Xmx256m -Dspring.profiles.active=prod
+
+# 前端项目
+cd /var/www/frontend
+rm -rf project-name
+mv build project-name
 ```
 
 # 资料
