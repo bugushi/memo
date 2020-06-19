@@ -1,8 +1,8 @@
 # 快捷键
-action | effect | desc
--- | --
+action | 效果 | 备注
+-- | -- | --
 Alt+Shift+D | Select descendents
-tab ｜ 延伸复制 | 脑图
+tab | 延伸复制 | 脑图
 control + enter | 平级复制 | 脑图
 
 # 技巧
