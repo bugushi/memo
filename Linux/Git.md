@@ -51,3 +51,8 @@ key | action
 `git push origin --delete :branch_name` | 删除远程分支
 `git merge :branch_name` | 合并分支到当前
 
+### Tag
+key | action 
+-- | --
+`git tag -a v1.0 -m '端午节发布'` | 新建tag
+`git push --tags` | 提交tag
