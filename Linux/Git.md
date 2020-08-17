@@ -57,3 +57,4 @@ key | action
 -- | --
 `git tag -a v1.0 -m '端午节发布'` | 新建tag
 `git push --tags` | 提交tag
+`git merge tag_name` | merge到tag
