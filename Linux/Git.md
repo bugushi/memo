@@ -15,8 +15,8 @@ key | action
 `cat ~/.gitconfig` | 查看全局git配置文件
 `git status` | 
 `git log` | 查看commit历史
-`git log --all` | 
-`git log :file_name` | 查看文件commit历史
+`git log --all` | 查看所有分支commit历史
+`git log :file_name` | 查看文件commit历史
 `git show` | 查看最近commit明细
 `git show :commit_hash` | 查看某次commit明细
 `git show :file_name` | 查看文件最近commit明细
