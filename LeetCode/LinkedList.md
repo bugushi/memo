@@ -1,6 +1,6 @@
 ### 2. Add Two Numbers
 
-```
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
