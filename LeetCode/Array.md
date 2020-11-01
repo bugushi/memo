@@ -1,17 +1,17 @@
 ## 1. Two Sum
-
+思路：用HashMap保存期望值，向前遍历寻找期望值
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] indexs = new int[2];
-        HashMap<Integer, Integer> potentials = new HashMap<>();
+        HashMap<Integer, Integer> expectations = new HashMap<>();
         for(int i=0; i<nums.length; i++) {
-            if(potentials.containsKey(nums[i])) {
+            if(expectations.containsKey(nums[i])) {
                 indexs[0] = i;
-                indexs[1] = potentials.get(nums[i]);
+                indexs[1] = expectations.get(nums[i]);
                 break;
             }
-            potentials.put(target-nums[i], i);
+            expectations.put(target-nums[i], i);
         }
         return indexs;
     }
@@ -19,6 +19,7 @@ class Solution {
 ```
 
 ## 26. Remove Duplicates from Sorted Array
+思路：双指针，p1指向第一个，p2指向第二个，p2向前走，遇到不同值前移
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {

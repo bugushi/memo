@@ -1,5 +1,5 @@
 ## 2. Add Two Numbers
-
+思路：cursor初始指向root node，将每次迭代结果赋于cursor.next，并前移cursor
 ```java
 /**
  * Definition for singly-linked list.
