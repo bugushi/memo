@@ -19,7 +19,7 @@ class Solution {
 ```
 
 ## 26. Remove Duplicates from Sorted Array
-思路：双指针，p1指向第一个，p2指向第二个，p2向前走，遇到不同值前移
+思路：双指针，p1指向第一个，p2指向第二个；p2向前走，遇到不同值p1进一，并前移此值
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {
