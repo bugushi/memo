@@ -1,5 +1,5 @@
 ## 1. Two Sum
-思路：用HashMap保存期望值，向前遍历寻找期望值
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -19,7 +19,8 @@ class Solution {
 ```
 
 ## 26. Remove Duplicates from Sorted Array
-思路：双指针，p1指向第一个，p2指向第二个；p2向前走，遇到不同值p1进一，并前移此值
+Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+> Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {
@@ -42,7 +43,7 @@ class Solution {
 ```
 
 ## 35. Search Insert Position
-思路：二分法
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
