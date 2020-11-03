@@ -92,3 +92,33 @@ class Solution {
     }
 }
 ```
+
+## 118. Pascal's Triangle
+Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
+```java
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> res = new ArrayList<>();
+        if(numRows == 0) {
+            return res;
+        }
+        for(int i=0; i<numRows; i++) {
+            if(i == 0) {
+                List<Integer> row = Arrays.asList(1);
+                res.add(row);
+                continue;
+            }
+            
+            List<Integer> row = new ArrayList<>();
+            for(int j=0; j<i+1; j++) {
+                List<Integer> prevRow = res.get(i-1);
+                Integer left = j-1 >= 0 ? prevRow.get(j-1) : 0;
+                Integer right = j < prevRow.size() ? prevRow.get(j) : 0;
+                row.add(left + right);
+            }
+            res.add(row);
+        }
+        return res;
+    }
+}
+```
