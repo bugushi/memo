@@ -33,7 +33,7 @@ class Solution {
 }
 ```
 
-206. Reverse Linked List
+## 206. Reverse Linked List
 ```java
 class Solution {
     public ListNode reverseList(ListNode head) {
@@ -47,6 +47,28 @@ class Solution {
             currNode = nextNode;
         }
         return prevNode;
+    }
+}
+```
+
+## 83. Remove Duplicates from Sorted List
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+```java
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null) return head;
+        ListNode prev = head;
+        ListNode curr = head.next;
+        while(curr != null) {
+            if(prev.val == curr.val) {
+                prev.next = curr.next;
+                curr = prev.next;
+                continue;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
+        return head;
     }
 }
 ```
