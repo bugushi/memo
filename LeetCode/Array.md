@@ -18,6 +18,30 @@ class Solution {
 }
 ```
 
+## 3. Longest Substring Without Repeating Characters
+Given a string s, find the length of the longest substring without repeating characters.
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maxLen = 0;
+        int left = 0;
+        for(int i=0; i<s.length(); i++){
+            char c = s.charAt(i);
+            if(map.containsKey(c)) {
+                left = Math.max(left, map.get(c) + 1);
+            }
+            
+            int len = i - left + 1;
+            maxLen = Math.max(maxLen, len);
+            
+            map.put(c, i);
+        }
+        return maxLen;
+    }
+}
+```
+
 ## 26. Remove Duplicates from Sorted Array
 Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
 > Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
