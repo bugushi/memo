@@ -115,3 +115,32 @@ public class Solution {
     }
 }
 ```
+
+## 147. Insertion Sort List
+Sort a linked list using insertion sort.
+```java
+class Solution {
+    public ListNode insertionSortList(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        ListNode dummy = new ListNode();
+        ListNode currNode = head, prevNode, nextNode;
+        
+        while(currNode != null) {
+            prevNode = dummy;
+            nextNode = dummy.next;
+            while(nextNode != null && nextNode.val < currNode.val) {
+                prevNode = prevNode.next;
+                nextNode = nextNode.next;
+            }
+            ListNode nextIter = currNode.next;
+            currNode.next = nextNode;
+            prevNode.next = currNode;
+            
+            currNode = nextIter;
+        }
+        return dummy.next;
+    }
+}
+```
