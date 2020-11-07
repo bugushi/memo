@@ -1,3 +1,27 @@
+## 94. Binary Tree Inorder Traversal
+Given the root of a binary tree, return the inorder traversal of its nodes' values.
+```java
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        helper(root, result);
+        return result;
+    }
+    
+    public void helper(TreeNode root, List<Integer> result) {
+        if(root != null) {
+            if(root.left != null) {
+                helper(root.left, result);
+            }
+            result.add(root.val);
+            if(root.right != null) {
+                helper(root.right, result);
+            }
+        }
+    }
+}
+```
+
 ## 104. Maximum Depth of Binary Tree
 Given a binary tree, find its maximum depth.
 ```java
