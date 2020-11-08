@@ -12,4 +12,30 @@ class Solution {
         return maxSoFar;
     }
 }
-````
+```
+
+## 96. Unique Binary Search Trees
+Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+```java
+class Solution {
+    int res = 0;
+    HashMap<Integer, Integer> cache = new HashMap<>();
+    
+    public int numTrees(int n) {
+        if(n == 0 || n == 1) {
+            return 1;
+        }
+        if(cache.containsKey(n)) {
+            return cache.get(n);
+        }
+        for(int i=0; i<n; i++) {
+            int leftLen = i;
+            int rightLen = n - i - 1;
+            res += numTrees(leftLen) * numTrees(rightLen);
+        }
+        
+        cache.put(n, res);
+        return res;
+    }
+}
+```
