@@ -74,3 +74,25 @@ class Solution {
     }
 }
 ```
+
+## 124. Binary Tree Maximum Path Sum
+Given a non-empty binary tree, find the maximum path sum.
+```java
+class Solution {
+    public int maxPathSum(TreeNode root) {
+        int[] res = {Integer.MIN_VALUE};
+        pathSum(root, res);
+        return res[0];
+    }
+    
+    private int pathSum(TreeNode node, int[] res) {
+        if(node == null) {
+            return 0;
+        }
+        int leftSum = Math.max(0, pathSum(node.left, res));
+        int rightSum = Math.max(0, pathSum(node.right, res));
+        res[0] = Math.max(res[0], node.val + leftSum + rightSum);
+        return Math.max(node.val + leftSum, node.val + rightSum);
+    }
+}
+```
