@@ -22,6 +22,56 @@ class Solution {
 }
 ```
 
+## 98. Validate Binary Search Tree
+Given a binary tree, determine if it is a valid binary search tree (BST).
+```java
+// recursion
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return helper(root, null, null);
+    }
+    
+    public boolean helper(TreeNode node, Integer lower, Integer upper) {
+        if(node == null) {
+            return true;
+        }
+        
+        if((lower != null && node.val <= lower) || (upper != null && node.val >= upper)) {
+            return false;
+        }
+        
+        return helper(node.left, lower, node.val) && helper(node.right, node.val, upper);
+    }
+}
+```
+
+```java
+//inorder traversal
+class Solution {
+    Stack<TreeNode> stack = new Stack();
+    double leftChildVal = -Double.MAX_VALUE;
+    
+    public boolean isValidBST(TreeNode root) {
+        while(!stack.isEmpty() || root != null) {
+            while(root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            
+            root = stack.pop();
+            if(root.val <= leftChildVal) {
+                return false;
+            }
+            
+            leftChildVal = root.val;
+            root = root.right;
+        }
+        
+        return true;
+    }
+}
+```
+
 ## 104. Maximum Depth of Binary Tree
 Given a binary tree, find its maximum depth.
 ```java
