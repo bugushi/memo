@@ -146,3 +146,27 @@ class Solution {
     }
 }
 ```
+
+## 144 Binary Tree Preorder Traversal
+Given the root of a binary tree, return the preorder traversal of its nodes' values.
+```java
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if(root == null) {
+            return res;
+        }
+        Stack<TreeNode> stack = new Stack();
+        while(!stack.isEmpty() || root != null) {
+            while(root != null) {
+                stack.push(root);
+                res.add(root.val);
+                root = root.left;
+            }
+            root = stack.pop();
+            root = root.right;
+        }
+        return res;
+    }
+}
+```
