@@ -80,6 +80,37 @@ class Solution {
 }
 ```
 
+## 20. Valid Parentheses
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+```java
+class Solution {
+    private HashMap<String, String> pairs;
+    
+    public Solution() {
+        pairs = new HashMap<String, String>();
+        pairs.put("{", "}");
+        pairs.put("(", ")");
+        pairs.put("[", "]");
+    }
+    
+    public boolean isValid(String s) {
+        Stack<String> stack = new Stack();
+        for(int i=0; i<s.length(); i++) {
+            String curr = String.valueOf(s.charAt(i));
+            if(pairs.containsKey(curr)) {
+                stack.push(curr);
+            } else if(stack.empty() || !curr.equals(pairs.get(stack.pop()))) {
+                return false;
+            }
+        }
+        if(stack.empty()) {
+            return true;
+        }
+        return false;
+    }
+}
+```
+
 ## 26. Remove Duplicates from Sorted Array
 Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
 > Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
