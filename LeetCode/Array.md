@@ -41,6 +41,27 @@ class Solution {
     }
 }
 ```
+## 11. Container With Most Water
+Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        int volume = 0;
+        int left = 0;
+        int right = height.length -1;
+        while(left < right) {
+            if(height[left] <= height[right]) {
+                volume = Math.max(volume, (right-left) * height[left]);
+                left++;
+            } else {
+                volume = Math.max(volume, (right-left) * height[right]);
+                right--;
+            }
+        }
+        return volume;
+    }
+}
+```
 
 ## 15. 3Sum
 Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
