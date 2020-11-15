@@ -101,37 +101,6 @@ class Solution {
 }
 ```
 
-## 20. Valid Parentheses
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-```java
-class Solution {
-    private HashMap<String, String> pairs;
-    
-    public Solution() {
-        pairs = new HashMap<String, String>();
-        pairs.put("{", "}");
-        pairs.put("(", ")");
-        pairs.put("[", "]");
-    }
-    
-    public boolean isValid(String s) {
-        Stack<String> stack = new Stack();
-        for(int i=0; i<s.length(); i++) {
-            String curr = String.valueOf(s.charAt(i));
-            if(pairs.containsKey(curr)) {
-                stack.push(curr);
-            } else if(stack.empty() || !curr.equals(pairs.get(stack.pop()))) {
-                return false;
-            }
-        }
-        if(stack.empty()) {
-            return true;
-        }
-        return false;
-    }
-}
-```
-
 ## 26. Remove Duplicates from Sorted Array
 Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
 > Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
@@ -233,6 +202,29 @@ class Solution {
             res.add(row);
         }
         return res;
+    }
+}
+```
+
+## 406. Queue Reconstruction by Height
+Suppose you have a random list of people standing in a queue. Each person is described by a pair of integers (h, k), where h is the height of the person and k is the number of people in front of this person who have a height greater than or equal to h. Write an algorithm to reconstruct the queue.
+
+```java
+class Solution {
+    public int[][] reconstructQueue(int[][] people) {
+        Arrays.sort(people, (x, y) -> {
+            if(x[0] <= y[0]) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        
+        List<int[]> res = new ArrayList<>();
+        for(int[] person: people) {
+            res.add(person[1], person);
+        }
+        return res.toArray(new int[res.size()][]);
     }
 }
 ```
