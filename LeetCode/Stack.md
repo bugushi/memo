@@ -108,3 +108,30 @@ class Solution {
     }
 }
 ```
+
+## 1544. Make The String Great 
+```java
+class Solution {
+    public String makeGood(String s) {
+        Deque<Character> deque = new LinkedList();
+        
+        String res = "";
+        
+        for(int i=0; i<s.length(); i++) {
+            char curr = s.charAt(i);
+            if(!deque.isEmpty() && deque.peekFirst() != curr 
+               && Character.toLowerCase(deque.peekFirst()) == Character.toLowerCase(curr)) {
+                deque.removeFirst();
+                continue;
+            }
+            deque.addFirst(s.charAt(i));
+        }
+        
+        while(!deque.isEmpty()) {
+            res += deque.removeLast();
+        }
+        
+        return res;
+    }
+}
+```
