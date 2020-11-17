@@ -79,3 +79,32 @@ class MinStack {
  * int param_4 = obj.getMin();
  */
 ```
+
+## 496. Next Greater Element I
+You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
+
+```java
+class Solution {
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        HashMap<Integer, Integer> map = new HashMap();
+        Stack<Integer> stack = new Stack();
+        
+        for(int i=0; i<nums2.length; i++) {
+            while(!stack.empty() && stack.peek() < nums2[i]) {
+                map.put(stack.pop(), nums2[i]);
+            }
+            stack.push(nums2[i]);
+        }
+
+        while(!stack.empty()) {
+            map.put(stack.pop(), -1);
+        }
+        
+        int[] res = new int[nums1.length];
+        for(int i=0; i<nums1.length; i++) {
+            res[i] = map.get(nums1[i]);
+        }
+        return res;
+    }
+}
+```
