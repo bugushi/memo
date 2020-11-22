@@ -80,6 +80,48 @@ class MinStack {
  */
 ```
 
+## 316. Remove Duplicate Letters
+Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+
+```java
+class Solution {
+    public String removeDuplicateLetters(String s) {
+        int[] count = new int[256];
+        for(int i=0; i<s.length(); i++) {
+            count[s.charAt(i)]++;
+        }
+        
+        Stack<Character> stack = new Stack();
+        HashSet<Character> set = new HashSet();
+        for(int i=0; i<s.length(); i++) {
+            char curr = s.charAt(i);
+            count[curr]--;
+            
+            if(set.contains(curr)) {
+                continue;
+            }
+            
+            while(!stack.empty() && stack.peek() > curr) {
+                // if top will never show again, don't pop
+                if(count[stack.peek()] == 0) {
+                    break;
+                }
+                set.remove(stack.pop());
+            }
+            
+            stack.push(curr);
+            set.add(curr);
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        while(!stack.empty()) {
+            sb.append(stack.pop());
+        }
+        return sb.reverse().toString();
+    }
+}
+```
+
 ## 496. Next Greater Element I
 You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
 
