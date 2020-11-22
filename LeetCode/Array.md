@@ -150,6 +150,80 @@ class Solution {
 }
 ```
 
+## 36. Valid Sudoku
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+1. Each row must contain the digits 1-9 without repetition.
+2. Each column must contain the digits 1-9 without repetition.
+3. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+```java 
+class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        for(int i=0; i<board.length; i++) {
+            HashSet<Character> rows = new HashSet();
+            HashSet<Character> columns = new HashSet();
+            HashSet<Character> boxes = new HashSet();
+            for(int j=0; j<board[i].length; j++) {
+                if(board[i][j] != '.' && !rows.add(board[i][j])) {
+                    return false;
+                }
+                
+                if(board[j][i] != '.' && !columns.add(board[j][i])) {
+                    return false;
+                }
+                
+                int row = j / 3 + (i / 3) * 3;
+                int col = j % 3 + (i % 3) * 3;
+                if(board[row][col] != '.' && !boxes.add(board[row][col])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
+```
+
+## 42. Trapping Rain Water
+Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+```java
+class Solution {
+    public int trap(int[] height) {
+        int peakIndex = 0;
+        
+        for(int i=0; i<height.length; i++) {
+            if(height[i] > height[peakIndex]) {
+                peakIndex = i;
+            }
+        }
+        
+        int water = 0;
+        
+        // left 
+        int leftBarrier = 0;
+        for(int i=0; i<peakIndex; i++) {
+            if(height[i] > leftBarrier) {
+                leftBarrier = height[i];
+            } else {
+                water += leftBarrier - height[i];
+            }
+        }
+        
+        // right
+        int rightBarrier = 0;
+        for(int i=height.length -1; i>peakIndex; i--) {
+            if(height[i] > rightBarrier) {
+                rightBarrier = height[i];
+            } else {
+                water += rightBarrier - height[i];
+            }
+        }
+        
+        return water;
+    }
+}
+```
+
 ## 88. Merge Sorted Array
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 > The number of elements initialized in nums1 and nums2 are m and n respectively.
