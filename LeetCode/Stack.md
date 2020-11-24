@@ -28,6 +28,31 @@ class Solution {
     }
 }
 ```
+## 84. Largest Rectangle in Histogram
+Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+```java
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        int[] newHeights = new int[heights.length+2];
+        for(int i=0; i<heights.length; i++) {
+            newHeights[i+1] = heights[i];
+        }
+
+        int area = 0;
+        Stack<Integer> stack = new Stack();
+        for(int i=0; i<newHeights.length; i++) {
+            while(!stack.empty() && newHeights[stack.peek()] > newHeights[i]) {
+                int height = newHeights[stack.pop()];
+                int width = i - stack.peek() - 1;
+                area = Math.max(width * height, area);
+            }
+            
+            stack.push(i);
+        }
+        
+        return area;
+    }
+```
 
 ## 155. Min Stack
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
