@@ -1,23 +1,3 @@
-## 1. Two Sum
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-```java
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int[] indexs = new int[2];
-        HashMap<Integer, Integer> expectations = new HashMap<>();
-        for(int i=0; i<nums.length; i++) {
-            if(expectations.containsKey(nums[i])) {
-                indexs[0] = i;
-                indexs[1] = expectations.get(nums[i]);
-                break;
-            }
-            expectations.put(target-nums[i], i);
-        }
-        return indexs;
-    }
-}
-```
-
 ## 3. Longest Substring Without Repeating Characters
 Given a string s, find the length of the longest substring without repeating characters.
 ```java
