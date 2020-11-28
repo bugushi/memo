@@ -1,3 +1,25 @@
+## 56. Merge Intervals
+Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+```java
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        Arrays.sort(intervals, Comparator.comparingInt(item -> item[0]));
+        int[][] output = new int[intervals.length][2];
+        output[0] = intervals[0];
+        int count = 1;
+        for(int i=1; i<intervals.length; i++) {
+            if(output[count-1][1] >= intervals[i][0]) {
+                output[count-1][1] = Math.max(output[count-1][1], intervals[i][1]);
+            } else {
+                output[count] = intervals[i];
+                count++;
+            }
+        }
+        return Arrays.copyOf(output, count);
+    }
+}
+```
+
 ## 215. Kth Largest Element in an Array
 Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 ```java
