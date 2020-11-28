@@ -21,6 +21,8 @@ key | action
 `git show :commit_hash` | 查看某次commit明细
 `git show :file_name` | 查看文件最近commit明细
 `git diff` | 查看工作区更改明细
+`git diff branch1 branch2 --stat` | 查看两个分支的文件差异
+`git diff branch1 branch2` | 查看两个分支的详细差异
 
 ### 暂存 
 key | action
