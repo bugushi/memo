@@ -123,6 +123,23 @@ class Solution {
 }
 ```
 
+## 111. Minimum Depth of Binary Tree
+Given a binary tree, find its minimum depth.
+```java
+class Solution {
+    public int minDepth(TreeNode root) {
+        if(root == null) return 0;
+        if(root.left == null && root.right == null) return 1;
+        
+        int leftDepth = minDepth(root.left);
+        int rightDepth = minDepth(root.right);
+        if(root.left == null || root.right == null) return leftDepth + rightDepth + 1;
+        
+        return Math.min(leftDepth, rightDepth) + 1;
+    }
+}
+```
+
 ## 112. Path Sum
 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
 ```java
