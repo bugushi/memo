@@ -61,3 +61,10 @@ key | action
 `git tag -a v1.0 -m '端午节发布'` | 新建tag
 `git push --tags` | 提交tag
 `git merge tag_name` | merge到tag
+
+### 查看进阶
+key | action
+-- | --
+`git log --oneline | grep -m1 "into 'master'"` | 查看第1个merge到master的提交，m2查看前两个
+`git log hotfix_20201204_009..release_20201205 --oneline | grep Merge` | 查看两个tag之间的提交记录
+
