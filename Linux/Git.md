@@ -67,4 +67,4 @@ key | action
 -- | --
 `git log --oneline | grep -m1 "into 'master'"` | 查看第1个merge到master的提交，m2查看前两个
 `git log hotfix_20201204_009..release_20201205 --oneline | grep Merge` | 查看两个tag之间的提交记录
-
+`git tag --sort=-taggerdate` | 查看所有tag按日期排列
