@@ -91,7 +91,7 @@ echo '===> Tag 打成功 : ' $newTag
 echo '=========> 删除开发分支'
 
 # 遍历分支
-relatedBranches=$(git log ${prevTag}..${currentTagName} --oneline | grep 'Merge branch' | cut -d ' ' -f4 | sort --unique)
+relatedBranches=$(git log ${prevTag}..${currentTagName} --oneline | grep 'Merge branch' | cut -d ' ' -f4 | sort --unique | sed $'s/\'//g')
 echo '===> 本次发布涉及的分支: ' $relatedBranches
 for branch in $relatedBranches; do
     branch_type=$(echo $branch | grep '/' | cut -d '/' -f1)
