@@ -54,6 +54,7 @@ key | action
 `git branch -d :local_branch_name` | 删除本地分支
 `git push origin --delete :branch_name` | 删除远程分支
 `git merge :branch_name` | 合并分支到当前
+`git fetch --prune` | 删除远程不存在的本地分支
 
 ### Tag
 key | action 
