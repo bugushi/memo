@@ -3,11 +3,11 @@
 > Git飞行规则：[https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md)
 
 ### 设置
-key | action
+key | action | 备注
 -- | --
 `git config --global user.name :name` | 设置用户名
 `git config --global user.email :email` | 设置email
-`git config --global core.ignorecase false` | 强制识别文件夹大小写
+`git config --global core.ignorecase false` | 强制识别文件夹大小写 | `git mv foo foo2` `git mv foo2 FOO`
 
 ### 查看
 key | action
