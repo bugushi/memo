@@ -4,11 +4,11 @@
 - 重排序
     > cpu可能对写操作瞎几把优化导致和代码顺序不一致
 
-## volatile的作用
+### volatile的作用
 - 立即更新缓存
 - 强制不重排序
 
-## hapens before
+### hapens before
 volatile变量之前的操作，会先于volatile同步到内存中。
 
 利用这种特性，可以只把一个变量标识为volatile（！！！但是别这么做，没事找事）
