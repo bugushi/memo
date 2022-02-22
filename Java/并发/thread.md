@@ -39,7 +39,7 @@ System.out.println(futureTask.get());
 ```
 
 # 基本用法
-## 线程休眠 Thread.sleep(ms)
+### 线程休眠 Thread.sleep(ms)
 ```java
 new Thread(() -> {
     try {
@@ -52,10 +52,10 @@ new Thread(() -> {
 })
 ```
 
-## 线程礼让 Thread.yeild()
+### 线程礼让 Thread.yeild()
 线程礼让，让出cpu，重新竞争调度，用于长耗时任务手工打断
 
-## 线程终止 t.interrupt()
+### 线程终止 t.interrupt()
 - 如果线程处于被阻塞状态（例如处于sleep, wait, join 等状态），那么线程将立即退出被阻塞状态，并抛出一个InterruptedException异常。仅此而已。
 - 如果线程处于正常活动状态，那么会将该线程的中断标志设置为 true，仅此而已。被设置中断标志的线程将继续正常运行，不受影响。
 - 应由线程本地处理中断
@@ -68,7 +68,7 @@ new Thread(() -> {
 }).start();
 ```
 - 或者使用标志位来手工处理，作用和interrupted一致
-## 守护线程
+### 守护线程
 - 守护线程优先级比较低，用户线程都结束后，守护线程会自动结束
 > 用于非关键场景，如 GC 或者日志
 ```
@@ -77,17 +77,17 @@ deamonThread.start();
 ```
 
 # 线程通信
-## SomeObject.wait()
+### SomeObject.wait()
 - SomeObject.wait() 释放对象锁，从`running`状态转为`waiting`状态
 - SomeObject.notify() 唤醒一个`waiting`状态的线程, 让它拿到对象锁，具体哪一个由JVM决定
 - SomeObject.notifyAll() 唤醒所有`waiting`状态的线程，接下来他们要竞争对象锁
 > 以上方法都需要在`synchronized`块中使用，典型使用场景是生产者消费者
 
-## threadInstance.join()
+### threadInstance.join()
 - 强制执行当前线程，线程强制运行期间，其他线程无法运行，必须等待此线程完成之后才可以继续执行。
 > 使用场景：如果后续逻辑依赖此线程执行结果
 
-## 管道
+### 管道
 - PipedOutputStream, PipedInputStream 面向字节
 - PipedReader, PipedWriter 面向字符
 > 应用场景：导出excel
@@ -98,6 +98,6 @@ deamonThread.start();
 ![](../../images/java/thread.png)
 
 # 常见问题
-## 可以直接调用 Thread 类的 run 方法么
+### 可以直接调用 Thread 类的 run 方法么
 可以。但是如果直接调用 Thread 的 run 方法，它的行为就会和普通的方法一样。
 为了在新的线程中执行我们的代码，必须使用 Thread 的 start 方法。
