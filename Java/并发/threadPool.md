@@ -74,6 +74,10 @@ workQueue类型
     > 线程池没有限制大小
 - newWorkStealingPool
     > 内部ForkJoinPool, 利用 Work-Stealing (opens new window)算法，并行地处理任务，不保证处理顺序。
+    >
+    > ForkJoinPool使用分治思想，用于解决大数据量的计算问题。使用ForkJoinPool需override RecursiveAction(无返回值) 或者 RecursiveTask(有返回值)
+    >
+    > ParallelStream底层用的是ForkJoinPool
 
 # 常见问题
 ### 线程数量
