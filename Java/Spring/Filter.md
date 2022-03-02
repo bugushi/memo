@@ -1,5 +1,6 @@
 # 介绍
 ![](../../images/java/filter.gif)
+![](../../images/java/filter_interceptor.jpeg)
 
 filter是一个类
 - 实现了Filter接口
@@ -20,6 +21,12 @@ filter是一个类
   </servlet-mapping>
 </web-app>   
 ```
+
+# 场景
+由于filter发生在请求进入DispatcherServlet之前，所以很适合做一些通用的事情：
+- 验权
+- 性能统计
+- 图片和数据压缩
 
 # 案例
 ### 记录日志
@@ -56,6 +63,10 @@ public FilterRegistrationBean<RequestResponseLoggingFilter> loggingFilter(){
         
     return registrationBean;    
 }
+```
+或者直接给filter类加注解
+```java
+@WebFilter(urlPatterns = "/users/*", filterName = "loggingFilter")
 ```
 
 # 参见
