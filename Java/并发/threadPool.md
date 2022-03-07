@@ -37,7 +37,7 @@ workQueue类型
     >
     > 是否创建线程判断顺序： corePoolSize => workQueue => maximumPoolSize
 - submit
-    > 有返回值
+    > 有返回值，返回Future对象
 - shutdown
     > 关闭线程池，正在执行的线程和等待任务，可以继续执行完毕。但不接收新任务
 - awaitTermination
