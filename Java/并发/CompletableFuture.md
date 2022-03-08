@@ -96,7 +96,7 @@ completableFuture.get(); // ExecutionException
 ```
 
 # 异步
-thenApplyAsync() 底层使用ForkJoinPool
+thenApplyAsync() 底层使用ForkJoinPool（所有带async后缀的都是）
 > thenApply() 使用当前线程
 
 ```java
