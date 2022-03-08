@@ -36,3 +36,6 @@ ForkJoinPool forkJoinPool = new ForkJoinPool();
 FactorialSquareCalculator calculator = new FactorialSquareCalculator(10);
 forkJoinPool.execute(calculator);
 ```
+
+# 参见
+- [Future - baeldung](https://www.baeldung.com/java-future)
