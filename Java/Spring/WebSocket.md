@@ -111,5 +111,13 @@ function disconnect() {
 }
 ```
 
+# 集群状态保持问题
+### 收消息
+由于websocket是有状态的，所以握手以后，后续消息必须发送到同一个服务实例
+- 使用nginx ip hash
+- 
+
+### 广播
+
 # 参见
 - [Spring Websocket - baeldung](https://www.baeldung.com/spring-websockets-sendtouser)
