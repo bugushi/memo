@@ -123,7 +123,6 @@ sequenceInputStream = new SequenceInputStream(inputStreams.elements());
 # 参考
 - [InputStream - 廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1298069163343905)
 - [字节流和字符流 - 腾讯云](https://cloud.tencent.com/developer/article/1401128)
-- [PipedInputStream和PipedOutStream记录
- - 知乎](https://zhuanlan.zhihu.com/p/31352578)
+- [PipedInputStream和PipedOutStream记录 - 知乎](https://zhuanlan.zhihu.com/p/31352578)
 - [SequenceInputStream Class in Java - Baeldung](https://www.baeldung.com/java-sequenceinputstream) 
 - [DataInputStream vs ObjectInputStream](https://stackoverflow.com/questions/11521027/whats-the-difference-between-dataoutputstream-and-objectoutputstream)
