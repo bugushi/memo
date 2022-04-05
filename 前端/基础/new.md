@@ -33,6 +33,7 @@ obj.__proto__ = Person.prototype;
 ```javascript
 Person.call(obj, 'zhangsan', 18);
 ```
+> 所以箭头函数不能作为构造函数，因为箭头函数内的this继承自定义时的上层作用域，且不能改变
 
 4、返回结果
 
