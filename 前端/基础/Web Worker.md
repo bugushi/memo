@@ -1,5 +1,18 @@
+# worker
+概括地说，Web Worker，Service Worker和Worklet都是在与浏览器页面线程不同的线程上运行的脚本。它们的不同之处在于它们的使用位置以及启用这些用例所必须具备的功能。
+- worklet与浏览器的渲染管道挂钩，使我们能够对浏览器的渲染过程（例如样式和布局）进行低级访问。
+- service worker是浏览器和网络之间的代理。通过拦截文档发出的请求，service worker可以将请求重定向到缓存，从而实现脱机访问。
+- Web Worker是通用脚本，使我们能够从页面线程上卸载处理器密集型worker。
+
+dimention | Web Workers  | Service Workers  
+--|--|--
+ Instances    | Many per tab | One for all tabs 
+ Lifespan     | Same as tab  | Independent      
+ Intended use | Parallelism  | Offline support  
+
 # 介绍
 - 用于执行耗时任务
+  - 图像处理
 - 主线程创建，后台执行
 - 执行完毕须关闭
 
@@ -97,5 +110,7 @@ Firefox	| 0ms	| 549MB
 > ArrayBuffer、MessagePort 和 ImageBitmap 实现了Transferable接口。
 
 # 参见
+- [深入分析Web worker, Service worker, Worklet - 简书](https://www.jianshu.com/p/e2cdc78ff47c)
+- [What can service workers do that web workers cannot? - stackoverflow](https://stackoverflow.com/questions/38632723/what-can-service-workers-do-that-web-workers-cannot)
 - [web worker 使用 tranferable](https://joji.me/zh-cn/blog/performance-issue-of-using-massive-transferable-objects-in-web-worker/)
 - [Transferable - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Transferable)

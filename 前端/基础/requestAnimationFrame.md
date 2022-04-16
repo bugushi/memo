@@ -24,3 +24,9 @@ function step(timestamp) {
 
 window.requestAnimationFrame(step);
 ```
+
+# 执行
+![](../../images/frontend/raf.awebp)
+
+# 参见
+- [眼见为实的EventLoop事件循环「1. requestAnimationFrame」- 掘金](https://juejin.cn/post/6844904083392839688)

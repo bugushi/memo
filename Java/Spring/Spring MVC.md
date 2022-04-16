@@ -9,8 +9,8 @@
     会话层(Session) | 应用层 | Socket 
     传输层(Transport) | 传输层 | TCP 
     网络层(Network) | 网络层 | IP
-    数据链路层(Data Link) | 数据链路层 | - 
-    物理层(Physical) | 物理层 | -
+    数据链路层(Data Link) | 链路层 | - 
+    物理层(Physical) | 链路层 | -
 - servlet是一个接口 javax.servlet.Servlet，它的各种实现用来处理各种应用层协议
 - 最初Spring使用web.xml来配置servlet
 - 后来Spring MVC实现了servlet     ？？？？？？
