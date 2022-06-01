@@ -1,5 +1,5 @@
 # Comparison
-kit | tag | desc
+libs | tag | desc
 -- | -- | --
 Tersor Flow | low-level, industry, tflite for mobile, DL | made by google
 PyTorch | middle-level, academic, DL | made by Facebook, widely used in research projects. allows almost unlimited customization
