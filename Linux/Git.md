@@ -71,3 +71,4 @@ key | action
 `git log hotfix_20201204_009..release_20201205 --oneline \| grep Merge` | 查看两个tag之间的提交记录
 `git tag --sort=-taggerdate` | 查看所有tag按日期排列
 `git tag --sort=-taggerdate \| grep -m1 ''` | 查看最新打的tag
+`git cherry -v master` | 查看和master分支的commit差异
