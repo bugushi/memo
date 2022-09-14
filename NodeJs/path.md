@@ -1,11 +1,11 @@
 # Functions
-### path.join
+### path.join()
 ```js
 path.join('/foo', 'bar', 'baz/asdf', 'quux', '..');
 // Returns: '/foo/bar/baz/asdf'
 ```
 
-### path.resolve
+### path.resolve()
 get absolute path from relative path, get current file absolute path with empty argument.
 ```js
 resolve('./another-file.js');
@@ -23,3 +23,15 @@ console.log(__filename);
 // Returns: '/home/user/my-module.js'
 ```
 
+### process.cwd
+return the folder where `node` run from
+```shell
+$ cd /home
+$ node user/my-module.js
+// return '/home'
+
+$ cd /home/user
+$ node my-module.js
+// return '/home/user'
+
+```
