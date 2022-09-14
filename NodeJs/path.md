@@ -36,6 +36,21 @@ console.log(__filename);
 // Returns: '/home/user/my-module.js'
 ```
 
+### NODE_PATH
+tell node where to require file
+```json
+{
+  "scripts": {
+    "start": "NODE_PATH=/var/www/lib node app.js"
+  }
+}
+```
+then
+```js
+require('module2/component.js');
+// looks for /var/www/lib/module2/component.js
+```
+
 # FAQ
 ### fs.readFileSync(path) the argument path is relative to the directory where `node` is invoked from?
 Yes, use `path.resolve(__dirname, "target_file_relative_path");` to get absolute path of the target file.
