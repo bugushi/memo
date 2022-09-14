@@ -12,18 +12,7 @@ resolve('./another-file.js');
 // Returns: '/home/user'
 ```
 
-# Variables
-### __dirname & __filename
-if current file is `/home/user/my-module.js`
-```
-console.log(__dirname);
-// Returns: '/home/user'
-
-console.log(__filename);
-// Returns: '/home/user/my-module.js'
-```
-
-### process.cwd
+### process.cwd()
 return the folder where `node` run from
 ```shell
 $ cd /home
@@ -35,3 +24,19 @@ $ node my-module.js
 // return '/home/user'
 
 ```
+
+# Variables
+### __dirname & __filename
+if current file is `/home/user/my-module.js`
+```
+console.log(__dirname);
+// Returns: '/home/user'
+
+console.log(__filename);
+// Returns: '/home/user/my-module.js'
+```
+
+# FAQ
+### fs.readFileSync(path) the argument path is relative to the directory where `node` is invoked from?
+Yes, use `path.resolve(__dirname, "target_file_relative_path");` to get absolute path of the target file.
+
