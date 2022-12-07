@@ -43,6 +43,7 @@ key | action
 `git reset HEAD` | 取消commit和add，重新提交代码
 `git reset --hard HEAD` | 取消commit、add和工作区修改，恢复和远程一致
 `git reset --hard :commit_hash` | 恢复到某一提交版本
+`git push -f origin last_known_good_commit:branch_name` | 撤回最近一次push
 
 ### 分支
 key | action
