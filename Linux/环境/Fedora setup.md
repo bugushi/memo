@@ -13,3 +13,10 @@
 - 重启
 - 参考
   - https://zhuanlan.zhihu.com/p/635384972 
+
+# gnome
+- 缩放
+  - 安装 gnome-tweak
+    - 设置字体缩放1.5
+- 插件
+  - caffeine 阻止休眠
