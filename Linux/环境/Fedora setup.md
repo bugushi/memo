@@ -18,5 +18,5 @@
 - 缩放
   - 安装 gnome-tweak
     - 设置字体缩放1.5
-- 插件
+- 插件（安装extension manager）
   - caffeine 阻止休眠
