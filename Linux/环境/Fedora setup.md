@@ -20,3 +20,4 @@
     - 设置字体缩放1.5
 - 插件（安装extension manager）
   - caffeine 阻止休眠
+  - dash to dock 类似mac的dock栏
