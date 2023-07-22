@@ -33,4 +33,5 @@
 - `sudo tar xvzf idealC-2022.X.Y.tar.gz -C /opt`
 - `/opt/idea-IC-VERSION/bin/idea.sh`
 - 生成桌面快捷方式
+- [安装Java](https://docs.fedoraproject.org/en-US/quick-docs/installing-java/)
 - `Add JDK` -> `/usr/lib/jvm/java-17`
