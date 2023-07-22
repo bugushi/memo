@@ -26,3 +26,11 @@
   - 注销重新登录
   - 设置中添加输入法
   - 输入状态下按 F4 切换简体
+
+# 安装 IntelliJ
+- 不要安装 flatpack 版，因为 flatpack 版运行在沙盒中，无法访问外部文件，因而无法配置 JDK
+- 到官网下载 .tar.gz 文件
+- `sudo tar xvzf idealC-2022.X.Y.tar.gz -C /opt`
+- `/opt/idea-IC-VERSION/bin/idea.sh`
+- 生成桌面快捷方式
+- `Add JDK` -> `/usr/lib/jvm/java-17`
