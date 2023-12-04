@@ -27,6 +27,14 @@
   - 设置中添加输入法
   - 输入状态下按 F4 切换简体
 
+# 鼠标动作
+- 使用 [input-remapper](https://github.com/sezanzeb/input-remapper) 映射滚轮左/右拨动和中键点击
+  Input | Output | Action
+  -- | -- | --
+  Wheel Left | Control_L + Alt_L + Right | 左划 Workspace
+  Wheel Right | Control_L + Alt_L + Left | 右划 Workspace
+  Button MIDDLE | Supper_L | Mission Control
+
 # 安装 IntelliJ
 - 不要安装 flatpack 版，因为 flatpack 版运行在沙盒中，无法访问外部文件，因而无法配置 JDK
 - 到官网下载 .tar.gz 文件
