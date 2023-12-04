@@ -21,7 +21,8 @@
 - 插件（安装extension manager）
   - caffeine 阻止休眠
   - dash to dock 类似mac的dock栏
-- 安装输入法
+    
+# 输入法
   - `sudo dnf install ibus-rime`
   - 注销重新登录
   - 设置中添加输入法
