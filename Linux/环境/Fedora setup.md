@@ -35,6 +35,7 @@
   Wheel Left | Control_L + Alt_L + Right | 左划 Workspace
   Wheel Right | Control_L + Alt_L + Left | 右划 Workspace
   Button MIDDLE | Supper_L | Mission Control
+  配置完成后，使用`input-remapper-control --command autoload`确保启动时preset加载成功
 
 # 安装 IntelliJ
 - 不要安装 flatpack 版，因为 flatpack 版运行在沙盒中，无法访问外部文件，因而无法配置 JDK
