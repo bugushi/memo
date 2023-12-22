@@ -85,3 +85,5 @@ key | action
   git mv foo2 FOO
   git commit -m "changed case of dir"
   ```
+### squash
+[How to Squash Commits in Git](https://www.git-tower.com/learn/git/faq/git-squash)
