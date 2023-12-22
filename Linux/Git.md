@@ -73,3 +73,15 @@ key | action
 `git tag --sort=-taggerdate` | 查看所有tag按日期排列
 `git tag --sort=-taggerdate \| grep -m1 ''` | 查看最新打的tag
 `git cherry -v master` | 查看和master分支的commit差异
+
+### 大小写重命名
+- 文件
+  ```
+  git mv --cached name.txt NAME.TXT
+  ```
+- 文件夹
+  ```
+  git mv foo foo2
+  git mv foo2 FOO
+  git commit -m "changed case of dir"
+  ```
