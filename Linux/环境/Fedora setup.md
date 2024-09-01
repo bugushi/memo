@@ -28,6 +28,9 @@
   - 设置中添加输入法
   - 输入状态下按 F4 切换简体
 
+# System monitor
+- btop
+
 # 鼠标动作
 - 使用 [input-remapper](https://github.com/sezanzeb/input-remapper) 映射滚轮左/右拨动和中键点击
   Input | Output | Action
